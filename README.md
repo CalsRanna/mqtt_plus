@@ -1,6 +1,6 @@
 # Mqtt plus
 
-![Current Version](https://img.shields.io/badge/0.0.1-blue?style=flat-square&label=version)
+![Current Version](https://img.shields.io/badge/0.0.2-blue?style=flat-square&label=version)
 
 Build a convenient mqtt client, provide emitter and handler to write business code here.
 

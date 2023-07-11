@@ -19,9 +19,10 @@ class MqttClient {
   void Function(String?)? onUnsubscribed;
 
   /// So far, *url* must contains protocol and port, e.g. mqtt://localhost:1883
-  MqttClient({required String url, String? prefix}) {
+  MqttClient({required String url, String? identifier, String? prefix}) {
     final uri = Uri.parse(url);
-    _identifier = '[${prefix ?? 'mqtt_plus'}][${const Uuid().v4()}]';
+    final defaultValue = '[${prefix ?? 'mqtt_plus'}][${const Uuid().v4()}]';
+    _identifier = identifier ?? defaultValue;
     _client = MqttServerClient.withPort(uri.host, _identifier, uri.port);
     _client.autoReconnect = true;
     _client.keepAlivePeriod = 60;
