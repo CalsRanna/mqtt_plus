@@ -45,6 +45,16 @@ class MqttClient {
     _handlers[type] = handler;
   }
 
+  /// Unregister a unique handler for every message type.
+  void unregisterHandle(String type, MqttHandler handler) {
+    final exist = _handlers.containsKey(type);
+    assert(exist, 'Handler for $type not registered');
+    if (!exist) {
+      throw MqttException('Handler for $type not registered');
+    }
+    _handlers.remove(type);
+  }
+
   Future<void> connect() async {
     await _client.connect();
     _client.updates?.listen(_handleReceived);

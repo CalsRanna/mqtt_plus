@@ -1,5 +1,10 @@
 class MqttException implements Exception {
-  const MqttException(this.message);
+  const MqttException(String message) : _message = message;
 
-  final String message;
+  final String _message;
+
+  String get message => _message;
+
+  @override
+  String toString() => message;
 }
