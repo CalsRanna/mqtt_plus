@@ -79,7 +79,7 @@ class MqttClient {
       final builder = MqttClientPayloadBuilder();
       payload['identifier'] = _identifier;
       final message = jsonEncode(payload);
-      builder.addString(message);
+      builder.addUTF8String(message);
       final topic = _topic ?? '';
       _client.publishMessage(topic, MqttQos.atMostOnce, builder.payload!);
     } catch (error) {

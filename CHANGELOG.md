@@ -1,3 +1,7 @@
+## 0.0.4
+
+- add UTF-8 support
+
 ## 0.0.3
 
 - add unregisterHandler function
