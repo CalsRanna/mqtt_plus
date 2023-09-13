@@ -1,3 +1,7 @@
+## 0.0.5
+
+- add username and password in connect
+
 ## 0.0.4
 
 - add UTF-8 support

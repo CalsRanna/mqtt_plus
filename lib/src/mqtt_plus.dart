@@ -55,8 +55,8 @@ class MqttClient {
     _handlers.remove(type);
   }
 
-  Future<void> connect() async {
-    await _client.connect();
+  Future<void> connect([String? username, String? password]) async {
+    await _client.connect(username, password);
     _client.updates?.listen(_handleReceived);
   }
 

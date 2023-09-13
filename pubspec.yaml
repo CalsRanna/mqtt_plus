@@ -1,6 +1,6 @@
 name: mqtt_plus
 description: Build a convenient mqtt client, provide emitter and handler to write business code here.
-version: 0.0.4
+version: 0.0.5
 homepage:
 repository: https://github.com/CalsRanna/mqtt_plus
 
