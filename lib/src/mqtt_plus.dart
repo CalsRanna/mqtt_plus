@@ -33,7 +33,8 @@ class MqttClient {
     _client.onUnsubscribed = onUnsubscribed;
   }
 
-  MqttClientConnectionStatus? get connectionStatus => _client.connectionStatus;
+  bool get connected =>
+      _client.connectionStatus?.state == MqttConnectionState.connected;
 
   String get identifier => _identifier;
 

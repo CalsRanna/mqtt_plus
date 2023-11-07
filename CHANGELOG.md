@@ -1,3 +1,8 @@
+## 0.0.7
+
+- deprecate `connectionStatus`
+- add connected get function
+
 ## 0.0.6
 
 - add `connectionStatus` get function

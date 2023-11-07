@@ -1,5 +1,6 @@
 library mqtt_plus;
 
+export 'package:mqtt_client/mqtt_client.dart' show MqttClientConnectionStatus;
 export 'package:mqtt_plus/src/mqtt_emitter.dart';
 export 'package:mqtt_plus/src/mqtt_exception.dart';
 export 'package:mqtt_plus/src/mqtt_handler.dart';
