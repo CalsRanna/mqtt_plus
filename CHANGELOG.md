@@ -1,3 +1,7 @@
+## 0.0.6
+
+- add `connectionStatus` get function
+
 ## 0.0.5
 
 - add username and password in connect

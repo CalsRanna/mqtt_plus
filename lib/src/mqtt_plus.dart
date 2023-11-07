@@ -33,6 +33,8 @@ class MqttClient {
     _client.onUnsubscribed = onUnsubscribed;
   }
 
+  MqttClientConnectionStatus? get connectionStatus => _client.connectionStatus;
+
   String get identifier => _identifier;
 
   /// Register a unique handler for every message type.
